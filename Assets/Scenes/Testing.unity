@@ -1460,15 +1460,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563c9eac517527948baba6bd500d903e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemy: {fileID: 1489271880}
   destinations:
   - {fileID: 820008845}
   - {fileID: 3718025}
   - {fileID: 993387547}
   - {fileID: 1719785912}
   distanceToPath: 2
-  distanceToFollow: 10
   followPlayer: 1
+  distanceToFollow: 10
 --- !u!195 &1489271880
 NavMeshAgent:
   m_ObjectHideFlags: 0

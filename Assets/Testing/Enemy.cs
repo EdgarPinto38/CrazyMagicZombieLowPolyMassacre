@@ -8,19 +8,21 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent enemy;
     public Transform[] destinations;
     private int i = 0;
-    private GameObject player;
     public float distanceToPath = 2;
-    public float distanceToFollow = 10;
-    private float distanceToPlayer;
     public bool followPlayer;
+    private GameObject player;
+    private float distanceToPlayer;
+    public float distanceToFollow = 10;
+    
+    
 
-    private void Start()
+    void Start()
     {
         enemy.destination = destinations[0].transform.position;
         player = FindObjectOfType<FirstPersonController>().gameObject;
     }
 
-    private void Update()
+     void Update()
     {
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
