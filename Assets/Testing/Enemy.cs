@@ -14,13 +14,14 @@ public class Enemy : MonoBehaviour
     private float distanceToPlayer;
     public float distanceToFollow = 10;
     private Animator animator;
+    public int life = 50;
     
     
 
     void Start()
     {
         enemy.destination = destinations[0].transform.position;
-        player = FindObjectOfType<FirstPersonController>().gameObject;
+        player = FindObjectOfType<FPSController>().gameObject;
         animator = GetComponent<Animator>();
     }
 
@@ -35,6 +36,13 @@ public class Enemy : MonoBehaviour
         else
         {
             EnemyPath();
+        }
+
+        if (life==0)
+        {
+            //animacion de morir
+            //corutina de morir
+            Destroy(this.gameObject);
         }
     }
 
