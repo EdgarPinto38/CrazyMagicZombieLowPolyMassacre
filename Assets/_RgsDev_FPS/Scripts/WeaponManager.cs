@@ -29,6 +29,10 @@ public class WeaponManager : MonoBehaviour
     bool isAiming;
     bool shootInput;
 
+
+    public static bool pistola = false;
+    public static bool m4 = false;
+    public static bool francotirador = false;
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
@@ -44,6 +48,31 @@ public class WeaponManager : MonoBehaviour
             isReloading = GetComponentInChildren<WeaponRanged>().isReloading;
             shootInput = GetComponentInChildren<WeaponRanged>().shootInput;
             isAiming = GetComponentInChildren<WeaponRanged>().isAiming;
+
+            if (weapons[1].activeSelf)
+            {
+                pistola = true;
+                m4 = false;
+                francotirador = false;
+            }
+            else if (weapons[2].activeSelf)
+            {
+                pistola = false;
+                m4 = true;
+                francotirador = false;
+            }
+            else if (weapons[3].activeSelf)
+            {
+                pistola = false;
+                m4 = false;
+                francotirador = true;
+            }
+            else
+            {
+                pistola = false;
+                m4 = false;
+                francotirador = false;
+            }
         }
 
         //If not reloading and not shooting

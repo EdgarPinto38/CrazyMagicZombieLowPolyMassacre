@@ -268,6 +268,23 @@ public class WeaponRanged : MonoBehaviour
                     destructible.FractureObject();
                 }
             }
+
+            if (hit.collider.gameObject.tag == "Enemy")
+            {
+                if (WeaponManager.pistola == true)
+                {
+                    //le baja 25
+                }
+                else if (WeaponManager.m4 == true)
+                {
+                    //le baja 5
+                }
+                else if (WeaponManager.francotirador == true)
+                {
+                    //le baja 50
+                }
+               
+            }
         }
 
         PlaySound(shootSound);
