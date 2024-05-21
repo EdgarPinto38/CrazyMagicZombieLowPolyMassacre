@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     private GameObject player;
     private float distanceToPlayer;
     public float distanceToFollow = 10;
+    private Animator animator;
     
     
 
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour
     {
         enemy.destination = destinations[0].transform.position;
         player = FindObjectOfType<FirstPersonController>().gameObject;
+        animator = GetComponent<Animator>();
     }
 
      void Update()
@@ -36,13 +38,21 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void TriggerHitAnimation()
+    {
+        animator.SetTrigger("Hit");
+    }
+
     public void EnemyPath()
     {
+
+        enemy.destination = destinations[i].position;
+
         if (Vector3.Distance(transform.position, destinations[i].position) <= distanceToPath)
         {
             if (destinations[i] != destinations[destinations.Length - 1]) 
             {
-                i++;
+                i ++;
             }
             else
             {
@@ -55,4 +65,8 @@ public class Enemy : MonoBehaviour
     {
         enemy.destination = player.transform.position;
     }
+
+    
+
+
 }
