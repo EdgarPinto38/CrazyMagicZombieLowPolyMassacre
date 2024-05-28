@@ -594,7 +594,7 @@ Transform:
   - {fileID: 399508475279559884}
   - {fileID: 7355458537935538054}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4230625760768990868
 Animator:
@@ -674,8 +674,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9976e8a45bb8a40909941a5aea5847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6097825969508746764, guid: dc0f30d51321e0046ab8a7aad4ff8643, type: 3}
+  playerTag: Player
   followRange: 10
+  patrolPoints:
+  - {fileID: 8826840602940952713, guid: 6fbf88232f740c54f9983a78dd7dc7b7, type: 3}
+  - {fileID: 7280014882983853232, guid: 15aa936a2e191624b9eba6f1857a6186, type: 3}
+  - {fileID: 2016199382217472306, guid: 07c1bac02f398d649b077685e6509f3a, type: 3}
+  patrolWaitTime: 2
+  lifeTime: 20
 --- !u!1 &2630553531834415784
 GameObject:
   m_ObjectHideFlags: 0
