@@ -103,6 +103,7 @@ public class WeaponRanged : MonoBehaviour
     float mainCameraFOV;
     float weaponCameraFOV;
 
+
     private void OnEnable()
     {
         if (ammoText != null)
@@ -269,21 +270,29 @@ public class WeaponRanged : MonoBehaviour
                 }
             }
 
-            if (hit.collider.gameObject.tag == "Enemy")
-            {
+           
                 if (WeaponManager.pistola == true)
                 {
                     //le baja 25
+                    damage= 25;
                 }
                 else if (WeaponManager.m4 == true)
                 {
                     //le baja 5
+                    damage = 5;
                 }
                 else if (WeaponManager.francotirador == true)
                 {
                     //le baja 50
+                    damage = 50;
                 }
                
+            
+
+            Enemy enemy = hit.transform.GetComponent<Enemy>(); // Busca el componente Enemy en el objeto alcanzado
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage); // Si el objeto alcanzado es un enemigo, aplica el daño
             }
         }
 

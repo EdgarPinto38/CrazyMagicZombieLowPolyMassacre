@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     private float distanceToPlayer;
     public float distanceToFollow = 10;
     private Animator animator;
-    public int life = 50;
+    public float health = 50f; // Salud inicial del enemigo
     
     
 
@@ -38,12 +38,6 @@ public class Enemy : MonoBehaviour
             EnemyPath();
         }
 
-        if (life==0)
-        {
-            //animacion de morir
-            //corutina de morir
-            Destroy(this.gameObject);
-        }
     }
 
     public void TriggerHitAnimation()
@@ -74,7 +68,20 @@ public class Enemy : MonoBehaviour
         enemy.destination = player.transform.position;
     }
 
-    
+    public void TakeDamage(float amount)
+    {
+        health -= amount; 
+        if (health <= 0f)
+        {
+            Die(); 
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject); 
+        
+    }
 
 
 }
