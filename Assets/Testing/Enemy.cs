@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         enemy.destination = destinations[0].transform.position;
-        player = FindObjectOfType<FirstPersonController>().gameObject;
+        player = FindObjectOfType<FPSController>().gameObject;
         animator = GetComponent<Animator>();
     }
 
