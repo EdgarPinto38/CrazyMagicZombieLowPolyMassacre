@@ -292,6 +292,7 @@ public class WeaponRanged : MonoBehaviour
             Enemy enemy = hit.transform.GetComponent<Enemy>(); // Busca el componente Enemy en el objeto alcanzado
             if (enemy != null)
             {
+                Debug.Log("Enemigo alcanzado");
                 enemy.TakeDamage(damage); // Si el objeto alcanzado es un enemigo, aplica el daño
             }
         }
