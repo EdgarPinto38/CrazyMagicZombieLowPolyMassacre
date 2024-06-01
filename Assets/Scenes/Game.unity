@@ -2059,7 +2059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &87830173
 Transform:
   m_ObjectHideFlags: 0
@@ -3246,7 +3246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &147601631
 Transform:
   m_ObjectHideFlags: 0
@@ -5604,7 +5604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &287064409
 Transform:
   m_ObjectHideFlags: 0
@@ -9044,7 +9044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &454609027
 Transform:
   m_ObjectHideFlags: 0
@@ -14880,6 +14880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 2252999737040668847, guid: 5b5f42c67eaace141b4d3c50c0d34bfa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9084032271838694558, guid: 5b5f42c67eaace141b4d3c50c0d34bfa, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -20649,7 +20653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1079315203
 Transform:
   m_ObjectHideFlags: 0
@@ -21676,7 +21680,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1136385243}
   - component: {fileID: 1136385242}
-  - component: {fileID: 1136385241}
   m_Layer: 0
   m_Name: Camera1
   m_TagString: MainCamera
@@ -21684,14 +21687,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1136385241
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136385240}
-  m_Enabled: 1
 --- !u!20 &1136385242
 Camera:
   m_ObjectHideFlags: 0
@@ -21839,6 +21834,10 @@ PrefabInstance:
     - target: {fileID: 124653010997485312, guid: 95661e49d7970f145a06ac33044c283c, type: 3}
       propertyPath: m_Name
       value: FPSController
+      objectReference: {fileID: 0}
+    - target: {fileID: 124653010997485312, guid: 95661e49d7970f145a06ac33044c283c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 124653010997969696, guid: 95661e49d7970f145a06ac33044c283c, type: 3}
       propertyPath: m_RootOrder
@@ -31909,7 +31908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1712312727
 Transform:
   m_ObjectHideFlags: 0
@@ -38620,7 +38619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2128997598
 Transform:
   m_ObjectHideFlags: 0
@@ -39103,7 +39102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2702705479733989509
 Transform:
   m_ObjectHideFlags: 0
@@ -39225,7 +39224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &6439324456528353449
 PrefabInstance:
   m_ObjectHideFlags: 0
