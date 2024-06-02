@@ -66,4 +66,15 @@ public class PlayerManager : MonoBehaviour
 	{
 		return FindObjectsOfType<PlayerManager>().SingleOrDefault(x => x.PV.Owner == player);
 	}
+
+	public void ResetStats()
+    {
+        kills = 0;
+        deaths = 0;
+
+        Hashtable hash = new Hashtable();
+        hash.Add("kills", kills);
+        hash.Add("deaths", deaths);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+    }
 }
