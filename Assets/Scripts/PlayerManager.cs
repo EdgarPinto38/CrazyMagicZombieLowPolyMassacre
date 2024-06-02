@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -11,10 +11,10 @@ public class PlayerManager : MonoBehaviour
 {
 	PhotonView PV;
 
-	//GameObject controller;
+	GameObject controller;
 
-	//int kills;
-	//int deaths;
+	int kills;
+	int deaths;
 
 	void Awake()
 	{
@@ -31,13 +31,11 @@ public class PlayerManager : MonoBehaviour
 
 	void CreateController()
 	{
-        Debug.Log("Instatiate player controller");
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs","PlayerController"),Vector3.zero,Quaternion.identity);
-		//Transform spawnpoint = SpawnManager.Instance.GetSpawnpoint();
-		//controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController"), spawnpoint.position, spawnpoint.rotation, 0, new object[] { PV.ViewID });
+		Transform spawnpoint = SpawnManager.Instance.GetSpawnpoint();
+		controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController"), spawnpoint.position, spawnpoint.rotation, 0, new object[] { PV.ViewID });
 	}
 
-	/*public void Die()
+	public void Die()
 	{
 		PhotonNetwork.Destroy(controller);
 		CreateController();
@@ -67,5 +65,5 @@ public class PlayerManager : MonoBehaviour
 	public static PlayerManager Find(Player player)
 	{
 		return FindObjectsOfType<PlayerManager>().SingleOrDefault(x => x.PV.Owner == player);
-	}*/
+	}
 }

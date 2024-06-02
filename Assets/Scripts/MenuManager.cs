@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +11,12 @@ public class MenuManager : MonoBehaviour
 	void Awake()
 	{
 		Instance = this;
+	}
+
+	void Start()
+	{
+		Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 	}
 
 	public void OpenMenu(string menuName)
